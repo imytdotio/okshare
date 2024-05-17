@@ -42,21 +42,21 @@ const InputModal = ({ onAddContent, onClose }) => {
 
   return (
     <div className="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center">
-      <div ref={modalRef} className="bg-white p-4 rounded w-11/12">
+      <div ref={modalRef} className="bg-white p-2 rounded-3xl w-96">
         <button
-          className="w-full bg-gray-300 text-black p-2 mb-4 rounded"
+          className="w-full bg-gray-300 text-black p-2 mb-2 rounded-3xl"
           onClick={toggleInputType}
         >
           {isImage ? 'Switch to Text' : 'Switch to Image URL'}
         </button>
         <textarea
-          className="w-full p-2 border rounded mb-4"
+          className="w-full p-2 border rounded-3xl mb-2"
           placeholder={isImage ? 'Enter image URL...' : 'Input any text...'}
           value={content}
           onChange={(e) => setContent(e.target.value)}
         />
         <button
-          className="bg-black text-white p-2 w-full rounded"
+          className="bg-black text-white p-2 w-full rounded-3xl"
           onClick={handleSubmit}
         >
           Upload

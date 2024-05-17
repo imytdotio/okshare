@@ -3,8 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  font-family: 'Outfit', sans-serif;
+}
 
-/* Center the app container and set a max-width */
+/* Apply the font to the entire app */
 body {
   display: flex;
   justify-content: center;
@@ -19,4 +22,9 @@ body {
   max-width: 375px; /* Max width for mobile-like layout */
   margin: auto;
   background-color: #f1f5f9;
+}
+
+/* Additional global styles */
+button, input, textarea {
+  font-family: 'Outfit', sans-serif;
 }
