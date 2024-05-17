@@ -5,7 +5,7 @@ import Space from './Space';
 
 const App = () => {
   return (
-    <div className="bg-[#f1f5f9] min-h-screen py-4">
+    <div className="bg-[#f1f5f9] min-h-screen py-4 px-2">
       <Header />
       <Routes>
         <Route path="/:spaceId" element={<Space />} />
