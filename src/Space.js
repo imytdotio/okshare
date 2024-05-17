@@ -71,26 +71,31 @@ const Space = () => {
   };
 
   return (
-    <div className="bg-[#f1f5f9] min-h-screen py-4">
-      <ContentBlocks contents={contents} onAddClick={handleAddClick} />
-      <button
-        className="w-full border border-red-500 text-red-500 p-2 mt-4 rounded-3xl"
-        onClick={handleDeleteClick}
-      >
-        Delete All Content in This Space
-      </button>
-      {showInputModal && (
-        <InputModal
-          onAddContent={addContent}
-          onClose={() => setShowInputModal(false)}
-        />
-      )}
-      {showConfirmationModal && (
-        <ConfirmationModal
-          onConfirm={deleteAllContent}
-          onClose={() => setShowConfirmationModal(false)}
-        />
-      )}
+    <div className="bg-[#f1f5f9] min-h-screen py-4 flex flex-col justify-between">
+      <div>
+        <ContentBlocks contents={contents} onAddClick={handleAddClick} />
+        <button
+          className="w-full border border-red-500 text-red-500 p-2 mt-4 rounded-3xl"
+          onClick={handleDeleteClick}
+        >
+          Delete All Content in This Space
+        </button>
+        {showInputModal && (
+          <InputModal
+            onAddContent={addContent}
+            onClose={() => setShowInputModal(false)}
+          />
+        )}
+        {showConfirmationModal && (
+          <ConfirmationModal
+            onConfirm={deleteAllContent}
+            onClose={() => setShowConfirmationModal(false)}
+          />
+        )}
+      <p className="text-xs text-gray-500 mt-4 text-center px-2">
+        Disclaimer: If another person enters the same ID, they can access the content. Please do not put important or personal information on OK Share.
+      </p>
+      </div>
     </div>
   );
 };
